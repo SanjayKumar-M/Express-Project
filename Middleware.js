@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/services', (req, res) => {
-  res.send('Our services include: Web Design, Web Development, SEO, Social Media Marketing, Email Marketing, Content Marketing, PPC Advertising, and Video Production.');
+  res.send('Our services include: Smart contract developemt, Auditing, Implementing Consensys Algorithms');
 });
 
 
