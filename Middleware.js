@@ -20,37 +20,36 @@ app.use('/:number', (req, res, next) => {
   next();
 });
 
+app.route('/')
+  .get((req, res) => {
+    res.send('Welcome to our commercial website!');
+  });
 
-app.get('/', (req, res) => {
-  res.send('Welcome to our commercial website!');
-});
+app.route('/services')
+  .get((req, res) => {
+    res.send('Our services include: Smart contract developemt, Auditing, Implementing Consensys Algorithms');
+  });
 
-app.get('/services', (req, res) => {
-  res.send('Our services include: Smart contract developemt, Auditing, Implementing Consensys Algorithms');
-});
+app.route('/:number')
+  .get((req, res) => {
+    res.send(`We offer ${req.serviceName} services.`);
+  });
 
+app.route('/about')
+  .get((req, res) => {
+    res.send('Learn more about our company and our team.');
+  });
 
-app.get('/:number', (req, res) => {
-  res.send(`We offer ${req.serviceName} services.`);
-});
+app.route('/contact')
+  .get((req, res) => {
+    res.send('Get in touch with us to discuss your project.');
+  });
 
-
-app.get('/about', (req, res) => {
-  res.send('Learn more about our company and our team.');
-});
-
-
-app.get('/contact', (req, res) => {
-  res.send('Get in touch with us to discuss your project.');
-});
-
-
-app.get('/careers', (req, res) => {
-  res.send('Check out our current job openings and apply to join our team.');
-});
-
-
+app.route('/careers')
+  .get((req, res) => {
+    res.send('Check out our current job openings and apply to join our team.');
+  });
 
 app.listen(5000, () => {
-  console.log(`Server listening Successfully ...`);
+  console.log('Server listening Successfully ...');
 });
