@@ -1,4 +1,3 @@
-const Home = require('./Home');
 const express = require('express')
 const path = require('path')
 const port = 3000
@@ -15,7 +14,6 @@ app.get('/:name/:id',(req, res)=>{
     res.send(`<h1>Hello ${name}, your unique id is ${id}`)
 })
 
-app.get('/',(req, res)=>{res.sendStatus("Homepage")})
-app.use('/home',Home)
+
 //common for listening
 app.listen(port,()=>{console.log("Port listening ...")})

@@ -1,4 +1,4 @@
-const express = require('express')
-const Home = express.Router()
-Home.get('/',(req, res)=>{res.send("<h1>This is Homepage</h1>")})
-
+import  Express  from "express";
+const Home = Express()
+Home.get('/',(req, res)=>{res.send("This is Home")})
+export default Home
