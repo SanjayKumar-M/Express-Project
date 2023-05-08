@@ -1,4 +1,4 @@
-import  Express  from "express";
+import Express from "express";
 const Service = Express()
 
 const services = [
@@ -20,15 +20,15 @@ const services = [
     },
 
 ]
-Service.get('/:id',(req,res)=>{
-        const {id }= req.params;
-        const detail = services.find((item) =>item.id == id)
-        if(detail){
+Service.get('/:id', (req, res) => {
+    const { id } = req.params;
+    const detail = services.find((item) => item.id == id)
+    if (detail) {
         res.send(`The service we provide is ${detail.ser}`)
-        }
-        else{
-            res.send("Invalid Services")
-        }
+    }
+    else {
+        res.send("Invalid Services")
+    }
 
 
 })
