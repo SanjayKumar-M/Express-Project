@@ -53,3 +53,42 @@ app.route('/careers')
 app.listen(5000, () => {
   console.log('Server listening Successfully ...');
 });
+
+// const express = require("express")
+// // const app = express()
+// // const port = 3000
+// // const path = require("path")
+// // const jsons = {
+// //     name: "Sanjay",reg: 21222, College: "Saveetha Engineering College"
+// // }
+
+// // app.set("view engine", "ejs")
+// // app.use(express.static(path.join(__dirname ,'public')))
+// // app.get('/',(req,res,next)=>{res.render('Home.ejs')})
+// // app.listen(port, console.log("Connection Established Successfully..."))
+// // // app.get('/:name/:pswd',(req,res)=>{
+// // //     const {name,pswd} = req.params;
+// // //     res.send(`<h1>The user name is ${name} and password is ${pswd}<h1>`)
+// // // })
+
+// const express = require("express");
+// const app = express();
+// const port = 3000;
+// const path = require("path");
+
+// app.set("view engine", "ejs"); 
+
+// app.use(express.static(path.join(__dirname, "public")));
+
+// app.get("/", (req, res, next) => {
+//   res.render("home.ejs");
+// });
+
+// app.get("/:name/:pswd", (req, res) => {
+//   const { name, pswd } = req.params;
+//   res.send(`<h1>The user name is ${name} and password is ${pswd}</h1>`); // Fixed closing tag for <h1>
+// });
+
+// app.listen(port, () => {
+//   console.log("Connection Established Successfully...");
+// });
