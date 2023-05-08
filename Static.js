@@ -1,11 +1,10 @@
-const express = require('express')
-const path = require('path')
+import  Express from 'express'
 const port = 3000
-const app = express()
+const app = Express()
 
 //this is for static server
 app.set("view engine","ejs")
-app.use(express.static(path.join(__dirname, 'public')))
+// app.use(Express.static(path.join('public')))
 app.get('/',(req, res)=>{res.render('home.ejs')})
 
 //parameters

@@ -19,7 +19,7 @@ const services = [
         ser: "Digital Marketing"
     },
 
-]
+]   
 Service.get('/:id', (req, res) => {
     const { id } = req.params;
     const detail = services.find((item) => item.id == id)
